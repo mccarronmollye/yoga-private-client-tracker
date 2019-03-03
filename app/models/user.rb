@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :yoga_classes
+  has_many :clients, through: :yoga_classes
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

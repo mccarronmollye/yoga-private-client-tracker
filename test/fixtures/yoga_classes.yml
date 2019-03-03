@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  title: MyString
+  intention: MyString
+  class_plan: MyString
+  notes: MyString
+  class_size: 1
+  user: one
+  client: one
+
+two:
+  location: MyString
+  title: MyString
+  intention: MyString
+  class_plan: MyString
+  notes: MyString
+  class_size: 1
+  user: two
+  client: two
