@@ -1,3 +1,12 @@
 <h1><%=@client.org_name%></h1>
 <label>Point of Contact: </label><%=@client.point_of_contact%> <br>
 <label><%=@client.point_of_contact%>'s email: </label><%=@client.email%>
+
+<p>History of Classes:</p>
+<% @client.yoga_classes.each do |yoga_class| %>
+  <%= link_to yoga_class.title, client_yoga_class_path(@client, yoga_class)%>
+<% end %>
+
+<br>
+<h2>Create a new Yoga Class</h2>
+<%= link_to "New Yoga Class", new_client_yoga_class_path(@client) %>

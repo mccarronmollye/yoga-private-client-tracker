@@ -1,7 +1,7 @@
 class YogaClassesController < ApplicationController
 
   def new
-    @yoga_class = YogaClass.new
+    @yoga_class = YogaClass.new(client_id: params[:client_id])
     @yoga_class.user = current_user
   end
 
