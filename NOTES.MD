@@ -13,7 +13,7 @@ Include a class level ActiveRecord scope method (model object & class method nam
  XInclude logout (how e.g. Devise)
  xInclude third party signup/login (how e.g. Devise/OmniAuth)
 Include nested resource show or index (URL e.g. users/2/recipes)
-Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
+Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) through clients
 Include form display of validation errors (form URL e.g. /recipes/new)
 Confirm:
 
@@ -21,3 +21,5 @@ The application is pretty DRY
 Limited logic in controllers
 Views use helper methods if appropriate
 Views use partials if appropriate
+
+db browser sqlite 
