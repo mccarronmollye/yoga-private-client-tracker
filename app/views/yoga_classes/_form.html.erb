@@ -16,7 +16,9 @@
   <%= f.text_area :class_plan %><br>
 
   <label>Client</label><br>
-  <%= f.text_field :client_id%><br>
+  <%= f.collection_select :client_id, Client.all, :id, :org_name %><br>
+  Note: Don't see your client? Create new client here:
+  <br>
 
   <%= f.label :class_size %><br>
   <%= f.text_field :class_size %><br>

@@ -28,7 +28,7 @@ class YogaClassesController < ApplicationController
   def update
     @yoga_class = YogaClass.find(params[:id])
 
-    @yoga_class.update(yoga_class)
+    @yoga_class.update(yoga_class_params)
 
     if @yoga_class.save
      redirect_to @yoga_class
@@ -41,7 +41,7 @@ class YogaClassesController < ApplicationController
   private
 
   def yoga_class_params
-    params.require(:yoga_class).permit(:notes, :location, :title, :intention, :class_plan, :class_size, :duration, :user_id)
+    params.require(:yoga_class).permit(:notes, :location, :title, :intention, :class_plan, :class_size, :duration, :user_id, :client_id)
   end
 
 end
