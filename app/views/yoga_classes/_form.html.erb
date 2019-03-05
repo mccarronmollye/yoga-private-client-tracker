@@ -1,31 +1,48 @@
+<% if @yoga_class.errors.any? %>
+<div id="error_explanation">
+  <h3>
+    <%= pluralize(@yoga_class.errors.count, "error") %>
+    prohibited this post from being saved:
+  </h3>
+
+  <ul>
+  <% @yoga_class.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
 <%= form_for @yoga_class do |f| %>
 
-  <%= f.label :title %><br>
+  <label>Client:</label><br>
+  <%= f.collection_select :client_id, Client.all, :id, :org_name %><br>
+  Don't see your client? Create new client <%= link_to 'here:', new_client_path %>
+  <br>
+  <br>
+
+  <%= f.label :title %>:<br>
   <%= f.hidden_field :client_id %>
   <%= f.text_field :title %><br>
 
-  <%= f.label :location %><br>
+  <%= f.label :location %>:<br>
   <%= f.text_field :location %><br>
 
-  <%= f.label :duration %> (in minutes)<br>
+  <%= f.label :duration %>: (in minutes)<br>
   <%= f.text_field :duration %><br>
 
-  <%= f.label :intention %><br>
+  <%= f.label :intention %>:<br>
   <%= f.text_field :intention %><br>
 
-  <%= f.label :class_plan %><br>
+  <%= f.label :class_plan %>:<br>
   <%= f.text_area :class_plan %><br>
 
-  <label>Client</label><br>
-  <%= f.collection_select :client_id, Client.all, :id, :org_name %><br>
-  Note: Don't see your client? Create new client here:
-  <br>
-
-  <%= f.label :class_size %><br>
+  <%= f.label :class_size %>:<br>
   <%= f.text_field :class_size %><br>
 
-  <%= f.label :notes %><br>
+  <%= f.label :notes %>:<br>
   <%= f.text_area :notes %><br>
 
   <%= f.submit "Submit" %>
+
  <% end %>
