@@ -35,8 +35,8 @@ class ClientsController < ApplicationController
   end
 
   def index
-    @clients = Client.all
-  end 
+    @clients = Client.all.sort_by {|client| client.org_name}
+  end
 
   private
 
