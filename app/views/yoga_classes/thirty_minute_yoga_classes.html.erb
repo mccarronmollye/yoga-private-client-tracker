@@ -1,0 +1,5 @@
+<h1> List of 30 Minute Classes </h1>
+
+<% YogaClass.all.thirty_minute_yoga_classes.each do |yoga_class|%>
+<%= link_to yoga_class.title, yoga_class_path(yoga_class) %> <br>
+<%end%>

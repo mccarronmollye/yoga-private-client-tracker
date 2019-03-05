@@ -7,7 +7,10 @@ xInclude at least two has_many through relationships (x has_many y through z; e.
 xInclude at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe xhas_many Items through Ingredients, Item has_many Recipes through Ingredients)
 xThe "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute xother than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity) (R, L, N/A) Need another...
 xInclude reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+xInclude a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+
+URL /yoga_class/30_minutes
+
  XInclude signup (how e.g. Devise)
  XInclude login (how e.g. Devise)
  XInclude logout (how e.g. Devise)

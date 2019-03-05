@@ -1,6 +1,9 @@
 class YogaClassesController < ApplicationController
   before_action :authenticate_user! #test this
 
+  def thirty_minute_yoga_classes
+  end
+
   def new
     @yoga_class = YogaClass.new(client_id: params[:client_id])
     @yoga_class.user = current_user
