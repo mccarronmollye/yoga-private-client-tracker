@@ -1,4 +1,4 @@
-add before_action :authenticate_user! to yoga_class controller given by devise
+xadd before_action :authenticate_user! to yoga_class controller given by devise
 
 xUsing Ruby on Rails for the project
 xInclude at least one has_many relationship (x has_many y; e.g. User has_many Recipes)

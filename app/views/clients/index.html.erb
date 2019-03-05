@@ -1,0 +1,7 @@
+<h1>List of All Clients</h1>
+
+<% @clients.each do |client| %>
+<h3>              <%= client.org_name %></h3> <br>
+Point of Contact: <%= client.point_of_contact %><br>
+Email:            <%= client.email %> <br>
+<%end%>

@@ -38,6 +38,10 @@ class YogaClassesController < ApplicationController
     end
   end
 
+  def index
+    @yoga_classes = YogaClass.all
+  end
+
 
   private
 
