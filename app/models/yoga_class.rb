@@ -7,4 +7,12 @@ class YogaClass < ApplicationRecord
   def self.thirty_minute_yoga_classes
     where("duration = 30")
   end
+
+  def self.fourty_five_minute_yoga_classes
+    where("duration = 45")
+  end
+
+  def self.sixty_minute_yoga_classes
+    where("duration = 60")
+  end
 end

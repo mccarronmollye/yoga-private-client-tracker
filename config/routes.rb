@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
 
   get 'yoga_classes/thirty_minute_yoga_classes', to: 'yoga_classes#thirty_minute_yoga_classes', as: 'thirty_minute_yoga_classes'
+  get 'yoga_classes/fourty_five_minute_yoga_classes', to: 'yoga_classes#fourty_five_minute_yoga_classes', as: 'fourty_five_minute_yoga_classes'
+  get 'yoga_classes/sixty_minute_yoga_classes', to: 'yoga_classes#sixty_minute_yoga_classes', as: 'sixty_minute_yoga_classes'
 
   resources :yoga_classes
 

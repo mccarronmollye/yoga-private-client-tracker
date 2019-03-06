@@ -3,6 +3,10 @@ class YogaClassesController < ApplicationController
 
   def thirty_minute_yoga_classes
   end
+  def fourty_five_minute_yoga_classes
+  end
+  def sixty_minute_yoga_classes
+  end
 
   def new
     @yoga_class = YogaClass.new(client_id: params[:client_id])
