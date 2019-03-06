@@ -1,19 +1,11 @@
-# README
+# Yoga Private Client Tracker
 
-* Ruby version
+Yoga Private Client Tracker is an application to help yoga studios keep track of private group classes-- which teachers taught the class and what kind of class was taught.
 
-* System dependencies
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Configuration
+Please make sure to update tests as appropriate.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
