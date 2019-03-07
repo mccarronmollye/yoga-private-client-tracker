@@ -4,7 +4,9 @@
 
 <p>History of Classes:</p>
 <% @client.yoga_classes.each do |yoga_class| %>
-  <%= link_to yoga_class.title, client_yoga_class_path(@client, yoga_class)%>
+<ul>
+  <li><%= link_to yoga_class.title, client_yoga_class_path(@client, yoga_class)%></li>
+</ul>
 <% end %>
 
 <br>
