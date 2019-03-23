@@ -1,0 +1,10 @@
+
+
+
+<%= form_for(@comment) do |f| %>
+
+  <label>Comment:</label><br>
+  <%= f.text_area :content %><br>
+  <%= f.hidden_field(:yoga_class_id, :value => comment.yoga_class_id) %>
+  <%= f.submit "Submit" %>
+<%end%>

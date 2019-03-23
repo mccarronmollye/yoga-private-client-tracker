@@ -20,3 +20,15 @@
 
 <label>Teacher:</label>
 <%= @yoga_class.user.email %> <br>
+
+
+<p>Comments</p>
+<% @comments.each do |comment| %>
+  <div>
+    <strong><%= comment.user.email%> said </strong>
+    <br>
+    <p><%= comment.content %></p>
+  </div>
+<% end %>
+
+<%= render partial: 'comments/form', locals: {comment: @comment} %>

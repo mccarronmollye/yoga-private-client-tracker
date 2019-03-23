@@ -11,8 +11,7 @@ class YogaClassesController < ApplicationController
   end
 
   def new
-    @yoga_class = YogaClass.new(client_id: params[:client_id])
-    @yoga_class.user = current_user
+    @yoga_class = current_user.yoga_classes.build(client_id: params[:client_id])
   end
 
   def create
@@ -28,6 +27,8 @@ class YogaClassesController < ApplicationController
 
   def show
     @yoga_class = YogaClass.find(params[:id])
+    @comment = @yoga_class.comments.build
+    @comments = @yoga_class.comments.all
   end
 
 

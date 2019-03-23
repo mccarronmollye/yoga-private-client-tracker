@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :yoga_classes
   has_many :clients, through: :yoga_classes
+  has_many :comments
   validates :email, uniqueness: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

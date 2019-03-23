@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_163156) do
+ActiveRecord::Schema.define(version: 2019_03_23_165604) do
 
   create_table "clients", force: :cascade do |t|
     t.string "org_name"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2019_03_04_163156) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.integer "yoga_class_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["yoga_class_id"], name: "index_comments_on_yoga_class_id"
   end
 
   create_table "users", force: :cascade do |t|
