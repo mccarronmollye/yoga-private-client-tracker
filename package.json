@@ -2,6 +2,7 @@
   "name": "yoga-private-client-tracker",
   "private": true,
   "dependencies": {
+    "handlebars": "^4.1.1",
     "jquery": "^3.3.1"
   }
 }
