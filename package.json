@@ -1,5 +1,7 @@
 {
   "name": "yoga-private-client-tracker",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
