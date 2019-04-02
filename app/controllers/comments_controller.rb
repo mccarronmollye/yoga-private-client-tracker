@@ -5,10 +5,7 @@ before_action :authenticate_user!
     @comment = current_user.comments.build(comment_params)
     #binding.pry
     if @comment.save
-      respond_to do |f|
-        f.json {render :json => @comment}
-        f.html {redirect_to @comment.yoga_class}
-      end
+        render :json => @comment.as_json(include: :user)
     else
         redirect_to request.referrer
     end

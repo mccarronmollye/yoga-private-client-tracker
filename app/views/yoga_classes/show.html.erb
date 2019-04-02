@@ -23,12 +23,14 @@
 
 
 <p>Comments</p>
+<div class="comment-content">
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user.email%> said </strong>
     <br>
-    <p class="comment-content"><%= comment.content %></p>
+    <p><%= comment.content %></p>
   </div>
 <% end %>
+</div>
 
 <%= render partial: 'comments/form', locals: {comment: @comment} %>

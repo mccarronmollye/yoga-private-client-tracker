@@ -1,9 +1,7 @@
 <h1>Welcome to the Private Client Tracker!</h1>
 <ul>
     <% if user_signed_in? %>
-<li><%= link_to "Create a New Class", new_yoga_class_path %><br></li>
 <li><%= link_to "View All Classes", yoga_classes_path %><br></li>
-<li><%= link_to "Create a Client", new_client_path %><br></li>
 <li><%= link_to "View All Clients", clients_path %><br></li>
   <%end%>
 </ul>

@@ -1,7 +1,9 @@
 <h1>List of All Clients</h1>
+<p><%= link_to "Create a Client", new_client_path %><br></p>
 
 <% @clients.each do |client| %>
-<h3>              <%= link_to client.org_name, client_path(client) %></h3> <br>
+<h3>              <%= link_to client.org_name, client_path(client) %></h3>
 Point of Contact: <%= client.point_of_contact %><br>
 Email:            <%= client.email %> <br>
+<br>
 <%end%>

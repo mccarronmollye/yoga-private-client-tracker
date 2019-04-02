@@ -1,11 +1,12 @@
 <h1>List of All Yoga Classes</h1>
+<h4>Quick Search </h4>
+<%= link_to "30 minute classes", thirty_minute_yoga_classes_path%>
+<%= link_to "45 minute classes", fourty_five_minute_yoga_classes_path%>
+<%= link_to "60 minute classes", sixty_minute_yoga_classes_path%><br>
+<br>
+<p><%= link_to "Create a New Class", new_yoga_class_path %><br></p>
 
 <% @yoga_classes.each do |yoga_class| %>
 <h3>              <%= link_to yoga_class.title, yoga_class_path(yoga_class) %></h3> <br>
 Class Plan:       <%= yoga_class.class_plan %><br>
 <%end%>
-
-<h2>Quick Search </h2>
-<%= link_to "30 minute classes", thirty_minute_yoga_classes_path%>
-<%= link_to "45 minute classes", fourty_five_minute_yoga_classes_path%>
-<%= link_to "60 minute classes", sixty_minute_yoga_classes_path%>
