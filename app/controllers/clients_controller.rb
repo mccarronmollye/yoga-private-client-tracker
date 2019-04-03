@@ -36,6 +36,7 @@ class ClientsController < ApplicationController
 
   def index
     @clients = Client.all.sort_by {|client| client.org_name}
+    render json: @clients
   end
 
   private

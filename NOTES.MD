@@ -26,3 +26,7 @@ Views use helper methods if appropriate
 Views use partials if appropriate
 
 db browser sqlite
+
+1. We need to hijack View All Yoga Classes link
+2. Once we're in event we need to fire an ajax data for yoga_classes
+3. Then we need to place it in the DOM / add to page

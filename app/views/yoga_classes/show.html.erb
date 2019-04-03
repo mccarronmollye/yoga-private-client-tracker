@@ -26,7 +26,7 @@
 <div class="comment-content">
 <% @comments.each do |comment| %>
   <div>
-    <strong><%= comment.user.email%> said </strong>
+    <strong><%= comment.user.first_name%> <%=comment.user.last_name%> said </strong>
     <br>
     <p><%= comment.content %></p>
   </div>

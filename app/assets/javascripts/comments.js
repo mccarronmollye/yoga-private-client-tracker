@@ -6,7 +6,7 @@ function Comment(attributes){
 
 Comment.prototype.renderP = function(){
  return `<div>
-     <strong> ${this.user.email} said </strong>
+     <strong> ${this.user.first_name} ${this.user.last_name} said </strong>
      <br>
      <p class="comment-content">${this.content}</p>
    </div>`

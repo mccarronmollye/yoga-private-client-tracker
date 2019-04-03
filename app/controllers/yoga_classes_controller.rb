@@ -1,5 +1,6 @@
 class YogaClassesController < ApplicationController
   before_action :authenticate_user! #test this
+  #before_action :set_client
 
   def thirty_minute_yoga_classes
   end
@@ -50,6 +51,7 @@ class YogaClassesController < ApplicationController
 
   def index
     @yoga_classes = YogaClass.all
+    #render json: @yoga_classes
   end
 
 
@@ -58,5 +60,10 @@ class YogaClassesController < ApplicationController
   def yoga_class_params
     params.require(:yoga_class).permit(:notes, :location, :title, :intention, :class_plan, :class_size, :duration, :user_id, :client_id)
   end
+
+  #def set_client
+  #  @client = Client.find(params[:client_id])
+  #end
+
 
 end
