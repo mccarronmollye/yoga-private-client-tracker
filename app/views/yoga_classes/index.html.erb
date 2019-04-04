@@ -1,3 +1,4 @@
+
 <h1>List of All Yoga Classes</h1>
 <h4>Quick Search </h4>
 <%= link_to "30 minute classes", thirty_minute_yoga_classes_path%>
@@ -7,5 +8,5 @@
 <p><%= link_to "Create a New Class", new_yoga_class_path %><br></p>
 
 <% @yoga_classes.each do |yoga_class| %>
-  <%= render partial: "yoga_class", locals: {yoga_class: yoga_class} %>  
+  <%= render partial: "yoga_class", locals: {yoga_class: yoga_class} %>
 <%end%>

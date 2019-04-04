@@ -1,9 +1,11 @@
-<h1>Welcome to the Private Client Tracker!</h1>
+<div class="text-center">
+<h1>Welcome to Yoga Private Client Tracker!</h1>
 <ul>
     <% if user_signed_in? %>
-<li><%= link_to "View All Classes", yoga_classes_path, :class => "yoga_classes" %><br></li>
-<li><%= link_to "View All Clients", clients_path, :class => "clients" %><br></li>
+<%= link_to "View All Classes", yoga_classes_path, :class => "yoga_classes" %><br>
+<%= link_to "View All Clients", clients_path, :class => "clients" %><br>
   <%end%>
 </ul>
 <div class="listed_clients"></div>
 <div class="listed_yoga_classes"></div>
+</div>

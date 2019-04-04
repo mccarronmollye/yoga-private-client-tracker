@@ -9,8 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
     <%= render 'layouts/nav' %>
-    <%= yield %>
+    <div class="text-center">
+      <%= yield %>
+    </div>
   </body>
 </html>
