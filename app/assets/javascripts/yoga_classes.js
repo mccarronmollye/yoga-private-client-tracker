@@ -1,7 +1,7 @@
 $(function() {
     $(".js-more").on('click', function(){
         let id = $(this).data("id");
-        $.getJSON("/yoga_classes/" + id + "/yoga_class_data", function(data) {
+        $.getJSON("/yoga_classes/" + id, function(data) {
         $("#body-" + id).html(data["class plan"]);
       });
      });
