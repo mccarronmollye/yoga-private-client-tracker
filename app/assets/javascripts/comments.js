@@ -8,7 +8,7 @@ Comment.prototype.renderP = function(){
  return `<div>
      <strong> ${this.user.first_name} ${this.user.last_name} said </strong>
      <br>
-     <p class="comment-content">${this.content}</p>
+     <p>${this.content}</p>
    </div>`
 }
 
@@ -33,7 +33,7 @@ $(function(){
         let commentP = comment.renderP()
 
        $(".comment-content").append(commentP)
-        console.log(json)
+        //console.log(json)
         document.getElementById("new_comment").reset();
         document.getElementsByTagName("input").disabled = true;
       })
