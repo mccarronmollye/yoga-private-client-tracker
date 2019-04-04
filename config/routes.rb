@@ -16,6 +16,6 @@ Rails.application.routes.draw do
 
   resources :yoga_classes
 
-  get '/yoga_classes/:id/body', to: 'yoga_classes#body'
+  get '/yoga_classes/:id/yoga_class_data', to: 'yoga_classes#yoga_class_data'
 
 end

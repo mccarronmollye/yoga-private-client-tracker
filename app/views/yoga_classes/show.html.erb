@@ -1,25 +1,27 @@
-<h1><%= @yoga_class.title %></h1> <br>
+<h1 class="yogaClassTitle"><%= @yoga_class.title %></h1> <br>
+
+<a href="#" class="js-next" data-id="<%=@yoga_class.id%>">Next...</a><br>
 
 <label>Duration:</label>
-<%= @yoga_class.duration %> minutes<br>
+<p class="yogaClassDuration" ><%= @yoga_class.duration %> minutes</p>
 
 <label>Location:</label>
-<%= @yoga_class.location %> <br>
+<p class="yogaClassLocation"><%= @yoga_class.location %></p>
 
 <label>Intention:</label>
-<%= @yoga_class.intention %> <br>
+<p class="yogaClassIntention"><%= @yoga_class.intention %></p>
 
 <label>Class Plan:</label>
-<%= @yoga_class.class_plan %> <br>
+<p class="yogaClassClassPlan"><%= @yoga_class.class_plan %></p>
 
 <label>Class Size:</label>
-<%= @yoga_class.class_size %> <br>
+<p class="yogaClassSize"><%= @yoga_class.class_size %></p>
 
 <label>Notes:</label>
-<%= @yoga_class.notes %> <br>
+<p class="yogaClassNotes"><%= @yoga_class.notes %></p>
 
 <label>Teacher:</label>
-<%= @yoga_class.user.email %> <br>
+<p class="yogaTeacher"><%= @yoga_class.user.email %></p>
 
 
 <p>Comments</p>
