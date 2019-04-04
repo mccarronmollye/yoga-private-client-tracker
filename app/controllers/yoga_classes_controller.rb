@@ -30,7 +30,6 @@ class YogaClassesController < ApplicationController
     @yoga_class = YogaClass.find(params[:id])
     @comment = @yoga_class.comments.build
     @comments = @yoga_class.comments.all
-    render json: YogaClassSerializer.serialize(@yoga_class)
   end
 
 
@@ -55,11 +54,11 @@ class YogaClassesController < ApplicationController
     #render json: @yoga_classes
   end
 
-  #def yoga_class_data
-    #yoga_class = YogaClass.find(params[:id])
+  def yoga_class_data
+    @yoga_class = YogaClass.find(params[:id])
     #render json: YogaClassSerializer.serialize(yoga_class)
-    #render json: yoga_class.to_json
-  #end
+    render json: @yoga_class
+  end
 
 
   private

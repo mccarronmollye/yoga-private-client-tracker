@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'yoga_classes/sixty_minute_yoga_classes', to: 'yoga_classes#sixty_minute_yoga_classes', as: 'sixty_minute_yoga_classes'
 
   resources :yoga_classes
-
-  #get '/yoga_classes/:id/yoga_class_data', to: 'yoga_classes#yoga_class_data'
+  resources :users
+  get '/yoga_classes/:id/yoga_class_data', to: 'yoga_classes#yoga_class_data'
 
 end
