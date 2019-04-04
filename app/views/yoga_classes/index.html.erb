@@ -7,6 +7,5 @@
 <p><%= link_to "Create a New Class", new_yoga_class_path %><br></p>
 
 <% @yoga_classes.each do |yoga_class| %>
-<h3>              <%= link_to yoga_class.title, yoga_class_path(yoga_class) %></h3> <br>
-Class Plan:       <%= yoga_class.class_plan %><br>
+  <%= render partial: "yoga_class", locals: {yoga_class: yoga_class} %>  
 <%end%>

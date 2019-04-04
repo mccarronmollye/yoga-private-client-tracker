@@ -54,6 +54,11 @@ class YogaClassesController < ApplicationController
     #render json: @yoga_classes
   end
 
+  def body
+    yoga_class = YogaClass.find(params[:id])
+    render plain: yoga_class.class_plan
+  end
+
 
   private
 
