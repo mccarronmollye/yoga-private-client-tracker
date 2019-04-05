@@ -25,7 +25,6 @@ $(function(){
         dataType: "json",
         method: "POST"
      })
-//    $.post(action, params)
       .success(function(json){
 
 
