@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   resources :comments
   devise_for :users, :controllers => { registrations: 'registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -15,7 +16,12 @@ Rails.application.routes.draw do
   get 'yoga_classes/sixty_minute_yoga_classes', to: 'yoga_classes#sixty_minute_yoga_classes', as: 'sixty_minute_yoga_classes'
 
   resources :yoga_classes
-  resources :users
+
+  #resources :users do
+  #  resources :yoga_classes, only: [:new, :show]
+  #end
+
   get '/yoga_classes/:id/yoga_class_data', to: 'yoga_classes#yoga_class_data'
+  get '/users/:id/yoga_classes', to: 'users#yoga_classes'
 
 end

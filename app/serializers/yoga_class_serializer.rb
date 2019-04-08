@@ -1,6 +1,7 @@
 class YogaClassSerializer < ActiveModel::Serializer
   attributes :id, :title, :duration, :location, :intention, :class_plan, :class_size, :notes, :user_id
   belongs_to :user, serializer: YogaClassUserSerializer
+  has_many :comments  
   #def self.serialize(yoga_class)
 
   # start with the open brace to create a valid JSON object

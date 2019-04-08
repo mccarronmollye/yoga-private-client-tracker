@@ -1,0 +1,5 @@
+<h2><%= @user.first_name%> <%= @user.last_name%>'s Profile</h2>
+<p>Email Address: <%= @user.email%></p>
+<button class="js-yoga-classes" data-id="<%= @user.id %>">View History of Yoga Classes</button>
+
+<div id="user-yoga-classes-<%= @user.id %>"></div>

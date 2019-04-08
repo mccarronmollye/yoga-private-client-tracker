@@ -30,3 +30,15 @@ db browser sqlite
 1. We need to hijack View All Yoga Classes link
 2. Once we're in event we need to fire an ajax data for yoga_classes
 3. Then we need to place it in the DOM / add to page
+
+<p>History of Classes:</p>
+<% @user.yoga_classes.each do |yoga_class| %>
+<ul>
+  <strong><%=yoga_class.title %></strong> <br>
+  <%=yoga_class.class_plan %> <br>
+  <p>Comments:</p>
+  <% yoga_class.comments.each do |comment|%>
+    <%=comment.content%>
+  <%end%>
+</ul>
+<% end %>
