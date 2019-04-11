@@ -2,4 +2,7 @@
 <p>Email Address: <%= @user.email%></p>
 <button class="js-yoga-classes" data-id="<%= @user.id %>">View History of Yoga Classes</button>
 
-<div id="user-yoga-classes-<%= @user.id %>"></div>
+<div id="user-yoga-classes-<%= @user.id %>">
+  <div id="user-yoga-classes-comments-<%= @user.id %>">
+  </div>
+</div>
