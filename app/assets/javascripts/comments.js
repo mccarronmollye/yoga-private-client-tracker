@@ -32,7 +32,6 @@ $(function(){
       $(".comment-content").append(commentDisplay)
 
       document.getElementById("new_comment").reset();
-      document.getElementsByTagName("input").disabled = true;
     })
     .error(function(response){
       console.log("Awe. an error!", response)
